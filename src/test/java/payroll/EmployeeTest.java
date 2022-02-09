@@ -1,19 +1,18 @@
 package payroll;
 
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
-class EmployeeTest {
 
-	@BeforeEach
-	void setUp() throws Exception {
-	}
+class EmployeeTest
+{
+	
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
+	
 
+	
+
+	
+	
 }
