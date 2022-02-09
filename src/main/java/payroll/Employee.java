@@ -15,7 +15,7 @@ public class Employee
 
 	}
 
-	@Override
+	
 	public String toString()
 	{
 		return "Employee " + name;
@@ -23,7 +23,7 @@ public class Employee
 
 	public float pay()
 	{
-		return this.rate * this.hours;
+		return rate * hours;
 	}
 
 	
