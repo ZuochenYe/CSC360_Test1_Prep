@@ -2,12 +2,15 @@ package payroll;
 
 import java.util.ArrayList;
 
-
 public class Company
 {
 	ArrayList<Employee> list = new ArrayList<Employee>();
-	int num = 0;
 
+	public int num()
+	{
+		return list.size();
+	}
+	
 	public Company()
 	{
 
@@ -16,13 +19,12 @@ public class Company
 	public void adde(Employee a)
 	{
 		list.add(a);
-		this.num = list.size();
 	}
 
 	public float[] payments()
 	{
-		float[] pays = new float[num];
-		for (int i = 0; i < num; i++)
+		float[] pays = new float[list.size()];
+		for (int i = 0; i < list.size(); i++)
 		{
 			Employee a = list.get(i);
 			pays[i] = a.pay();
@@ -32,16 +34,16 @@ public class Company
 	
 	public int finde(String name)
 	{
-		for (int i = 0; i < num; i++)
+		for (int i = 0; i < list.size(); i++)
 		{
 			Employee a = list.get(i);
-			if (a.getName().equals(name))
+			if (a.getName() == name)
 				return i;
 		}
 		return -1;
 	}
 
-	public void change_hour(String name, int hour) throws PersonNonExistException
+	public void seth(String name, int hour) throws PersonNonExistException
 	{
 		int i = finde(name);
 		if (i == -1)
